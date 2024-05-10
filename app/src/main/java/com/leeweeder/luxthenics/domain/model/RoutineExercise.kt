@@ -36,7 +36,8 @@ data class RoutineExercise(
     val restTimeMillis: Long,
     val exerciseType: ExerciseType,
     val volume: Volume,
-    val exerciseGroupId: Int?
+    val exerciseGroupId: Int?,
+    val note: String?
 ) {
     @PrimaryKey(autoGenerate = true)
     var id: Int = 0
