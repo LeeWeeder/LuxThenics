@@ -15,7 +15,7 @@ fun LuxThenicsTheme(
     content: @Composable () -> Unit
 ) {
     val context = LocalContext.current
-    val colorScheme = dynamicDarkColorScheme(context)
+    val colorScheme = dynamicDarkColorScheme(context).copy(surface = Color.Black, background = Color.Black)
 
     val view = LocalView.current
     if (!view.isInEditMode) {
