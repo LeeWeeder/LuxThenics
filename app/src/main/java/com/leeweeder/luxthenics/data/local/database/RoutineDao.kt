@@ -4,10 +4,8 @@ import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
-import androidx.room.Transaction
 import androidx.room.Update
 import com.leeweeder.luxthenics.domain.model.Routine
-import com.leeweeder.luxthenics.domain.model.ExerciseWithTargets
 import kotlinx.coroutines.flow.Flow
 
 @Dao
