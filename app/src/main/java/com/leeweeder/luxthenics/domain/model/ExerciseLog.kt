@@ -11,8 +11,11 @@ data class ExerciseLog(
     val progressionId: Int,
     val date: Date,
     val volume: Volume.Fixed,
-
-    ) {
+    val weight: Float,
+    val setNumber: Int = 1,
+    val note: String?,
+    val routineExerciseId: Int
+) {
     @PrimaryKey(autoGenerate = true)
     var id: Int = 0
 }
