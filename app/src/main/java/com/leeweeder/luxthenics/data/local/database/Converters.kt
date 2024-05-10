@@ -5,7 +5,7 @@ import com.leeweeder.luxthenics.utils.ExerciseType
 import com.leeweeder.luxthenics.utils.Volume
 import java.util.Date
 
-class TypeConverters {
+class Converters {
     @TypeConverter
     fun fromVolume(volume: Volume): String {
         return when (volume) {
