@@ -3,6 +3,7 @@ package com.leeweeder.luxthenics.domain.model
 import androidx.room.Embedded
 import androidx.room.Entity
 import androidx.room.ForeignKey
+import androidx.room.Index
 import androidx.room.Junction
 import androidx.room.Relation
 
@@ -15,7 +16,8 @@ import androidx.room.Relation
         entity = Target::class,
         parentColumns = arrayOf("id"),
         childColumns = arrayOf("targetId")
-    )], primaryKeys = ["exerciseId", "targetId"]
+    )], primaryKeys = ["exerciseId", "targetId"],
+    indices = [Index("targetId")]
 )
 data class ExerciseTargetCrossRef(
     val exerciseId: Int,

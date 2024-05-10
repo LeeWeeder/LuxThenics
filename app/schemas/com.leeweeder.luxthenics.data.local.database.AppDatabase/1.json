@@ -2,7 +2,7 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "3aa8860a43687f37ca5ae985440034e0",
+    "identityHash": "9c7250664fbbd9cf895e37fec43ed586",
     "entities": [
       {
         "tableName": "Exercise",
@@ -501,7 +501,17 @@
             "targetId"
           ]
         },
-        "indices": [],
+        "indices": [
+          {
+            "name": "index_ExerciseTargetCrossRef_targetId",
+            "unique": false,
+            "columnNames": [
+              "targetId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_ExerciseTargetCrossRef_targetId` ON `${TABLE_NAME}` (`targetId`)"
+          }
+        ],
         "foreignKeys": [
           {
             "table": "Exercise",
@@ -531,7 +541,7 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '3aa8860a43687f37ca5ae985440034e0')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '9c7250664fbbd9cf895e37fec43ed586')"
     ]
   }
 }
