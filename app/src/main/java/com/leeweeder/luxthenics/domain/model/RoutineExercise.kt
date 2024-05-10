@@ -2,6 +2,7 @@ package com.leeweeder.luxthenics.domain.model
 
 import androidx.room.Entity
 import androidx.room.ForeignKey
+import androidx.room.Index
 import androidx.room.PrimaryKey
 import com.leeweeder.luxthenics.utils.ExerciseType
 import com.leeweeder.luxthenics.utils.Volume
@@ -27,7 +28,7 @@ import com.leeweeder.luxthenics.utils.Volume
             parentColumns = arrayOf("id"),
             childColumns = arrayOf("exerciseGroupId")
         )
-    ]
+    ], indices = [Index("exerciseGroupId"), Index("routineId"), Index("exerciseId")]
 )
 data class RoutineExercise(
     val exerciseId: Int,
