@@ -2,7 +2,6 @@ package com.leeweeder.luxthenics.domain.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import androidx.room.TypeConverter
 import com.leeweeder.luxthenics.utils.Volume
 import java.util.Date
 
