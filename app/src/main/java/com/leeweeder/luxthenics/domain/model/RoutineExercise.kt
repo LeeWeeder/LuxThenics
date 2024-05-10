@@ -1,4 +1,4 @@
-package com.leeweeder.luxthenics.data.domain.model
+package com.leeweeder.luxthenics.domain.model
 
 import androidx.room.Entity
 import androidx.room.ForeignKey
