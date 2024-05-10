@@ -52,16 +52,6 @@ class TypeConverters {
     }
 
     @TypeConverter
-    fun fromChar(value: Char): String {
-        return value.toString()
-    }
-
-    @TypeConverter
-    fun toChar(value: String): Char {
-        return value[0]
-    }
-
-    @TypeConverter
     fun fromTimestamp(value: Long): Date {
         return Date(value)
     }
