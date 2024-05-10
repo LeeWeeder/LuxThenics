@@ -1,12 +1,24 @@
 package com.leeweeder.luxthenics.domain.model
 
 import androidx.room.Entity
+import androidx.room.ForeignKey
+import androidx.room.Index
 import androidx.room.PrimaryKey
 import androidx.room.TypeConverter
 import com.leeweeder.luxthenics.utils.Volume
 import java.util.Date
 
-@Entity
+@Entity(
+    foreignKeys = [ForeignKey(
+        entity = RoutineExercise::class,
+        parentColumns = arrayOf("id"),
+        childColumns = arrayOf("routineExerciseId")
+    ), ForeignKey(
+        entity = Progression::class,
+        parentColumns = arrayOf("id"),
+        childColumns = arrayOf("progressionId")
+    )], indices = [Index("progressionId"), Index("routineExerciseId")]
+)
 data class ExerciseLog(
     val progressionId: Int,
     val date: Date,
