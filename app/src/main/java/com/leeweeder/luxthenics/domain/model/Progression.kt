@@ -16,7 +16,13 @@ import androidx.room.PrimaryKey
         parentColumns = arrayOf("id"),
         childColumns = arrayOf("exerciseId")
     )],
-    indices = [Index(value = ["name"], unique = true)]
+    indices = [Index(value = ["name"], unique = true), Index(
+        value = ["level", "exerciseId"],
+        unique = true
+    ), Index(
+        value = ["level", "parentProgressionId"],
+        unique = true
+    ), Index("exerciseId"), Index("parentProgressionId")]
 )
 data class Progression(
     val parentProgressionId: Int?,

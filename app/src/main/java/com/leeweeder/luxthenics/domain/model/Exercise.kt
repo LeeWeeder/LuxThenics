@@ -6,8 +6,7 @@ import androidx.room.PrimaryKey
 
 @Entity(indices = [Index(value = ["name"], unique = true)])
 data class Exercise(
-    val name: String,
-    val note: String?
+    val name: String
 ) {
     @PrimaryKey(autoGenerate = true)
     var id: Int = 0
